@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+ Copyright (c) 2002-2006, Holger Crysandt
+
+  This file is part of MPEG7AudioEnc.
+-->
+<schema targetNamespace="http://mpeg7audioenc.sf.net/mpeg7audioenc.xsd"
+        xmlns:mp7ae="http://mpeg7audioenc.sf.net/mpeg7audioenc.xsd"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified"
+        attributeFormDefault="qualified">
+        
+<complexType name="ModuleType" abstract="true">
+	<attribute name="enable" type="boolean" use="required"/>
+</complexType>
+
+<complexType name="OutputModuleType" abstract="true">
+  <complexContent>
+    <extension base="mp7ae:ModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="Resizer">
+  <complexContent>
+    <extension base="mp7ae:ModuleType">
+      <sequence minOccurs="0">
+        <element name="HopSize" type="decimal" default="10"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioWaveform">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="AudioPower">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="logScale" type="boolean" default="false" minOccurs="0"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioSpectrumCentroidSpread">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="AudioSpectrumEnvelope">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="dbScale" type="boolean" default="false" minOccurs="0"/>
+        <element name="hiEdge" type="decimal" default="16000.0"/>
+        <element name="loEdge" type="decimal" default="62.5"/>
+        <element name="normalize" default="off" minOccurs="0">
+          <simpleType>
+            <restriction base="string">
+              <enumeration value="off"/>
+              <enumeration value="power"/>
+              <enumeration value="norm2"/>
+            </restriction>
+          </simpleType>
+        </element>
+        <element name="resolution" type="decimal" default="1.0"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioSpectrumFlatness">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="hiEdge" type="decimal" default="16000.0" />
+        <element name="loEdge" type="decimal" default="250.0" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioSpectrumBasisProjection">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="frames" type="integer" default="50" />
+        <element name="numic" type="integer" default="5" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioHarmonicity" >
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="Silence">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="levelofref" type="integer" default="200" />
+        <element name="min_dur" type="integer" default="300" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioFundamentalFrequency">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="hilimit" type="decimal" default="1000.0" />
+        <element name="lolimit" type="decimal" default="50.0" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioSignature">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="decimation" type="integer" default="32" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="SoundModel">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="label" type="string" default="myLabel" />
+        <element name="numOfStates" type="integer" default="10" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="AudioTempoType">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="ATTHopsize" type="integer" default="3000"/>
+        <element name="hiLimit" type="float" default="200.0" />       
+        <element name="loLimit" type="float" default="40.0" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="HarmonicPeaks">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="nonHarmonicity" type="decimal" default="0.15" />
+        <element name="threshold" type="decimal" default="0.0" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="HarmonicSpectralCentroid">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="HarmonicSpectralDeviation">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="HarmonicSpectralSpread">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="HarmonicSpectralVariation">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="LogAttacTime">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence minOccurs="0">
+        <element name="threshold" type="decimal" default="0.02"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="SignalEnvelope">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+      <sequence>
+        <element name="windowlength" type="integer" default="10"/>
+        <element name="windowslide" type="integer" default="5"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="SpectralCentroid">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="TemporalCentroid">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="DigitalClip">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="SampleHold">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="Click">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="BackgroundNoiseLevel">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="DcOffset">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="BandWidth">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType" />
+  </complexContent>
+</complexType>
+
+<complexType name="LogAttackTime">
+  <complexContent>
+    <extension base="mp7ae:OutputModuleType">
+	  <sequence>
+	    <element name="threshold" type="decimal" default="0.02"/>
+	  </sequence>
+	</extension>
+  </complexContent>
+</complexType>
+
+<complexType name="ConfigType">
+  <sequence>
+    <element name="Usage" type="string" minOccurs="0" maxOccurs="1" />
+    <element name="Module" type="mp7ae:ModuleType"  minOccurs="0" maxOccurs="unbounded" />
+  </sequence>
+</complexType>
+
+<element name="Config" type="mp7ae:ConfigType" />
+
+</schema>
