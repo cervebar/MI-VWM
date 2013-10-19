@@ -1,0 +1,17 @@
+Významné rysy:
+
+singing(žádné): jazz, klasika
+singing(málo):
+singing(normal):pop, rock, punk, metal
+singing(scream):punk, metal, hard rock, heavy-metal
+
+duration (slow):punk
+duration (long):rock-balad,classic
+
+love_factor (todo naocitat kolik prumerne):pop, dechovka, lidovky, country
+
+klicova slova: 
+kovboj: contry
+panenky : dechovka
+
+ 

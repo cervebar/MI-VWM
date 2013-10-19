@@ -1,0 +1,128 @@
+<br />
+<b>Warning</b>:  mysql_close(): supplied argument is not a valid MySQL-Link resource in <b>/home2/kralv/public_html/punkmp3/index.php</b> on line <b>90</b><br />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1250"/>
+  <title>PunkMp3.cz - Stažení souboru</title>
+	<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+  <meta http-equiv="Content-Language" content="cs"/>
+  <meta name="keywords" content="mp3, hudba, music, stáhnout, punk, CD" />
+  <meta name="description" content="Punkové mp3 (mp3 punk) k přímému stažení!" />
+  <link href="http://www.punkmp3.cz/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <SCRIPT LANGUAGE="JavaScript">
+    <!--
+  	  imgsrc=new Array();
+  	  imgsrc[1]="http://www.punkmp3.cz/images/a_menubutton1.gif";
+      imgsrc[2]="http://www.punkmp3.cz/images/p_menubutton1.gif";
+      imgsrc[3]="http://www.punkmp3.cz/images/a_menubutton2.gif";
+      imgsrc[4]="http://www.punkmp3.cz/images/p_menubutton2.gif";
+      imgsrc[5]="http://www.punkmp3.cz/images/a_menubutton3.gif";
+      imgsrc[6]="http://www.punkmp3.cz/images/p_menubutton3.gif";
+      imgsrc[7]="http://www.punkmp3.cz/images/a_menubutton4.gif";
+      imgsrc[8]="http://www.punkmp3.cz/images/p_menubutton4.gif";
+      imgsrc[9]="http://www.punkmp3.cz/images/a_menubutton5.gif";
+      imgsrc[10]="http://www.punkmp3.cz/images/p_menubutton5.gif";
+      imgsrc[11]="http://www.punkmp3.cz/images/a_menubutton6.gif";
+      imgsrc[12]="http://www.punkmp3.cz/images/p_menubutton6.gif";
+      imgsrc[13]="http://www.punkmp3.cz/images/a_menubutton7.gif";
+      imgsrc[14]="http://www.punkmp3.cz/images/p_menubutton7.gif";
+      imgsrc[15]="http://www.punkmp3.cz/images/a_menubutton8.gif";
+      imgsrc[16]="http://www.punkmp3.cz/images/p_menubutton8.gif";
+      imgsrc[17]="http://www.punkmp3.cz/images/a_menubutton9.gif";
+      imgsrc[18]="http://www.punkmp3.cz/images/p_menubutton9.gif";
+
+      img =new Array();
+      for (i=0; i< imgsrc.length; i++) {
+        img[i]=new Image();
+        img[i].src=imgsrc[i];
+      }
+      function change(number, picture) {
+        {
+          document[picture].src=img[number].src;
+        }
+      }
+    // -->
+  </SCRIPT>
+
+<div id="header">
+	<h2><a href="http://www.punkmp3.cz/">PunkMp3.cz</a></h2>
+	<h1>punkové mp3 (mp3 punk) přímo ke stažení!</h1>
+</div>
+<div id="menu">
+	<ul>
+		<li>
+		<A HREF="http://www.punkmp3.cz/novinky/" ONMOUSEOVER="change('1','m1')" ONMOUSEOUT= "change('2','m1')" name="m1">
+	      <IMG NAME="m1" SRC="http://www.punkmp3.cz/images/p_menubutton1.gif" BORDER="0">
+		</a>
+		</li>
+		<li>
+	    <A HREF="http://www.punkmp3.cz/nejstahovanejsi/" ONMOUSEOVER="change('3','m2')" ONMOUSEOUT= "change('4','m2')" name="m2">
+	      <IMG NAME="m2" SRC="http://www.punkmp3.cz/images/p_menubutton2.gif" BORDER="0">
+	    </A>
+		</li>
+
+		<li>
+		<A HREF="http://www.punkmp3.cz/hledani/" ONMOUSEOVER="change('7','m4')" ONMOUSEOUT= "change('8','m4')" name="m4">
+		  <IMG NAME="m4" SRC="http://www.punkmp3.cz/images/p_menubutton4.gif" BORDER="0">
+		</A>
+		</li>
+		<li>
+		<A HREF="http://www.punkmp3.cz/odkazy/" ONMOUSEOVER="change('13','m7')" ONMOUSEOUT= "change('14','m7')" name="m7">
+		  <IMG NAME="m7" SRC="http://www.punkmp3.cz/images/p_menubutton7.gif" BORDER="0">
+		</A>
+		</li>
+		<li>
+		<A HREF="http://www.punkmp3.cz/" ONMOUSEOVER="change('15','m8')" ONMOUSEOUT= "change('16','m8')" name="m8">
+		  <IMG NAME="m8" SRC="http://www.punkmp3.cz/images/p_menubutton8.gif" BORDER="0">
+		</A>
+		</li>
+		<li>
+		<A HREF="http://www.punk-mp3.com" ONMOUSEOVER="change('17','m9')" ONMOUSEOUT= "change('18','m9')" name="m9">
+		  <IMG NAME="m9" SRC="http://www.punkmp3.cz/images/p_menubutton9.gif" BORDER="0">
+		</A>
+		</li>
+	</ul>
+</div>
+<div id="content" class="bg2">
+Stahování souboru zahájeno...<br />
+<b>Warning</b>:  readfile(http://www.visaci.cz/_audio/sex/zatykac.mp3) [<a href='function.readfile'>function.readfile</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in <b>/home2/kralv/public_html/punkmp3/_get_file.php</b> on line <b>45</b><br />
+</div>
+<div id="footer" class="bg3">
+	<p>Punkové mp3 (mp3 punk) k přímému stažení!<br>
+	   Copyright &copy; 2007 PunkMp3.cz - kontakt: mail(zavináč)punkmp3.cz<br>
+	   <a href="http://www.spunk.cz" title="katalog punk stránek">Katalog punk stránek SPunk</a><br>
+	   <a href="http://www.punkmp3.cz/zasady-ochrany-osobnich-udaju/">Zásady ochrany osobních údajů</a></p>
+
+
+<a href="http://www.toplist.cz/"><script language="JavaScript" type="text/javascript">
+<!--
+document.write ('<img src="http://toplist.cz/count.asp?id=470200&logo=blank&http='+escape(document.referrer)+'&wi='+escape(window.screen.width)+'&he='+escape(window.screen.height)+'&cd='+escape(window.screen.colorDepth)+'&t='+escape(document.title)+'" width="0" height="0" border=0 alt="TOPlist" />');
+//--></script><noscript><img src="http://toplist.cz/count.asp?id=470200&logo=counter" border="0"
+alt="TOPlist" width="0" height="0" /></noscript></a>
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+<script type="text/javascript">
+re_("9n7i3-10406bj67j");
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8334916-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<div style="position:absolute;left:-7257px;"><a href="http://www.marcscheff.com/samples/UX/Atinera/.js/diflucan.html">cheap diflucan next day</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/retin-a.html">retin-a online without doctor prescription</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/clomid.html">clomid early ovulation</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/zovirax.html">zovirax without rx or membership</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/lasix.html">find lowest prices for lasix er</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/propecia.html">propecia generic</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/paxil.html">paxil overnight cod</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/amoxil.html">buy cheap generic amoxil and overseas</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/nexium.html">cheap nexium next day</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/flagyl.html">where to purchase flagyl no prescription no fees</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/bactrim.html">cheap bactrim online</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/acyclovir.html">buy no prescription acyclovir meds</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/baclofen.html">baclofen 502</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/arimidex.html">online arimidex cod</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/premarin.html">difference between premarin and estrace</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/valtrex.html">i want a valtrex prescription</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/wellbutrin.html">buy wellbutrin no credit card</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/synthroid.html">acheter synthroid</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/hydrochlorothiazide.html">buy hydrochlorothiazide in switzerland</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/doxycycline.html">doxycycline delivery to us missouri</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/neurontin.html">neurontin without doctor rx</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/norvasc.html">from norvasc 5mg</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/accutane.html">cheap accutane next day</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/prozac.html">prozac hcl 500mg</a>, so <a href="http://www.marcscheff.com/samples/UX/Atinera/.js/zithromax.html">cheap zithromax online no rx saturday delivery</a>, so </div>

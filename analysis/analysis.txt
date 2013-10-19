@@ -1,0 +1,38 @@
+Co definuje žánr:
+interpret sám
+rytmus
+použité nástroje
+o čem s zpívá
+jestli se zpívá
+text: love faktor (kolikrát se opakuje slovo láska v písničce)
+
+Co dělá v audiu podobné dokumenty:
+stejný rytmus
+basy versus výšky (nástrojové odlišnosti)
+hlasitost- výkyvy, detekce řevu
+tempo - 
+doba trvání
+
+
+EE jdete do prdele
+genre: punk
+duration: 5s
+description: fast hard loud guitar big_bass_drums bass_guitar scream short_duration
+
+Vlava
+genre:classic
+duration: 300s
+description: dynamic soft violin long_duration
+
+
+--zkusit:
+piráti z Karibiku v různých verzích
+pokud máme název tak skusit stáhnout lyrycs
+pokud máme jméno tak skusit najít kapelu
+
+sparse matrix, lucene, váhy, faktorization machine, split stream into batches (batch size, treshold)
+-------------------------------------------------------
+PREPINACE NA UI
+-------------------------------------------------------
+raw (pouze video jak je s deskriptorama z MPEG7), instruments, text (transcripty pisni), web (podle nazvu pisne, podle extrahovanych vlastnosti rychle), zapnout hledani kapely, MLT, clustering
+
