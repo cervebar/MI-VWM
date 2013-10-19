@@ -30,7 +30,7 @@ piráti z Karibiku v různých verzích
 pokud máme název tak skusit stáhnout lyrycs
 pokud máme jméno tak skusit najít kapelu
 
-sparse matrix, lucene, váhy, faktorization machine, split stream into batches (batch size, treshold)
+sparse matrix, lucene, váhy, faktorization machine, split stream into batches (batch size, treshold), regresní problém
 -------------------------------------------------------
 PREPINACE NA UI
 -------------------------------------------------------

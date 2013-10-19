@@ -1,0 +1,33 @@
+curl http://127.0.0.1:8983/solr/collection1/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+
+sliding window 20
+curl http://127.0.0.1:8983/solr/slidingwindow20/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/slidingwindow40/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/slidingwindow60/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/slidingwindow204060/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+
+
+limsi1
+curl http://127.0.0.1:8983/solr/008_all_morelikethis/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/004_given_segments/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+
+
+
+curl http://127.0.0.1:8983/solr/005_document_LIMSI/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/006_givensegments_subtitle/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://127.0.0.1:8983/solr/007_slidingwindow60/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+curl http://ir-dev.lmcloud.vse.cz/solr/RecSys_001/query/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>*:*</query></delete>"
+
+
+
+curl http://ir-dev.lmcloud.vse.cz/solr/011c_THD_Limsi_sliding_100/update/?commit=true -H "Content-Type: text/xml" -d "<delete><query>videoid:"v20080511_203000_bbcthree_little_britain"</query></delete>"

@@ -12,6 +12,7 @@ import fit.ctu.cz.vwm.business.SimpleBUsiness;
 import fit.ctu.cz.vwm.dao.Dao;
 import fit.ctu.cz.vwm.dao.SimpleDao;
 import fit.ctu.cz.vwm.model.AudioDocument;
+import fit.ctu.cz.vwm.model.GenreResult;
 
 public class Start {
 
@@ -33,11 +34,21 @@ public class Start {
 
 		AudioDocument aDoc = new AudioDocument();
 		aDoc.setPathToXmlExtraction(pathToXmlExtraction);
+		aDoc.setName(mp3File.getName().substring(0, mp3File.getName().indexOf(".")));
+		aDoc.setPathToMp3File(mp3filePath);
 
 		// business.extractInstruments(aDoc);
 		// business.extractText(aDoc);
-		business.extractDescriptor(aDoc);
+		business.extractFeatures(aDoc);
 		dao.save(aDoc);
+
+		// MLT approach
+		GenreResult genre = business.findGenre(aDoc);
+		System.out.println(genre.pritnInfo());
+
+		// IS is? approach
+
+		// cluster approach
 
 	}
 }

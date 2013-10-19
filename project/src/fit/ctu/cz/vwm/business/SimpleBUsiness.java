@@ -25,8 +25,12 @@ import de.crysandt.audio.mpeg7audio.Ticker;
 import de.crysandt.audio.mpeg7audio.mci.MediaHelper;
 import de.crysandt.audio.mpeg7audio.mci.MediaInformation;
 import de.crysandt.xml.Namespace;
+import fit.ctu.cz.vwm.business.extract.instrument.InstrumentExtractor;
+import fit.ctu.cz.vwm.model.AudioDocument;
+import fit.ctu.cz.vwm.model.GenreResult;
 
 public class SimpleBUsiness implements Business {
+	InstrumentExtractor insturmentExtrc;
 
 	@Override
 	public String extract(File mp3File) throws IOException, UnsupportedAudioFileException,
@@ -73,6 +77,32 @@ public class SimpleBUsiness implements Business {
 
 		transformer.transform(new DOMSource(mp7), new StreamResult(fileStream));
 		return outputPath;
+	}
+
+	@Override
+	public void extractFeatures(AudioDocument aDoc) {
+		// instruments
+		aDoc.setInstruments(insturmentExtrc.extract());
+		aDoc.
+		// song_text
+		// lyrics
+		// tempo
+		// genre
+		// description
+		// duration
+		// love_factor
+		// singing
+		// rhytmus
+		//tacts
+		// song_type
+		// band_name
+
+	}
+
+	@Override
+	public GenreResult findGenre(AudioDocument aDoc) {
+		//
+		return null;
 	}
 
 }
