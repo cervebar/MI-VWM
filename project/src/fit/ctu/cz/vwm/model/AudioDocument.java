@@ -14,6 +14,79 @@ public class AudioDocument {
 	String songLyrics;
 	String genre;
 	long duration;// in seconds
+
+	public String getSongText() {
+		return songText;
+	}
+
+	public void setSongText(String songText) {
+		this.songText = songText;
+	}
+
+	public String getSongLyrics() {
+		return songLyrics;
+	}
+
+	public void setSongLyrics(String songLyrics) {
+		this.songLyrics = songLyrics;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public long getDuration() {
+		return duration;
+	}
+
+	public void setDuration(long duration) {
+		this.duration = duration;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public long getLoveFactor() {
+		return loveFactor;
+	}
+
+	public void setLoveFactor(long loveFactor) {
+		this.loveFactor = loveFactor;
+	}
+
+	public String getRythm() {
+		return rythm;
+	}
+
+	public void setRythm(String rythm) {
+		this.rythm = rythm;
+	}
+
+	public String getSongType() {
+		return songType;
+	}
+
+	public void setSongType(String songType) {
+		this.songType = songType;
+	}
+
+	public String getBandName() {
+		return bandName;
+	}
+
+	public void setBandName(String bandName) {
+		this.bandName = bandName;
+	}
+
 	String description;
 	long loveFactor;
 	String rythm;

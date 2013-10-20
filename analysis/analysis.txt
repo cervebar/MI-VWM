@@ -31,6 +31,10 @@ pokud máme název tak skusit stáhnout lyrycs
 pokud máme jméno tak skusit najít kapelu
 
 sparse matrix, lucene, váhy, faktorization machine, split stream into batches (batch size, treshold), regresní problém
+
+1: extract features
+2: definovat query - co to neni co to muze byt genrematrice [001011010110101], 
+
 -------------------------------------------------------
 PREPINACE NA UI
 -------------------------------------------------------

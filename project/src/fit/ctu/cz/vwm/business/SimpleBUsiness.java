@@ -3,6 +3,8 @@ package fit.ctu.cz.vwm.business;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -25,12 +27,22 @@ import de.crysandt.audio.mpeg7audio.Ticker;
 import de.crysandt.audio.mpeg7audio.mci.MediaHelper;
 import de.crysandt.audio.mpeg7audio.mci.MediaInformation;
 import de.crysandt.xml.Namespace;
+import fit.ctu.cz.vwm.business.extract.Extractor;
 import fit.ctu.cz.vwm.business.extract.instrument.InstrumentExtractor;
+import fit.ctu.cz.vwm.business.extract.lyrics.LyricsExtractor;
+import fit.ctu.cz.vwm.business.extract.text.SongTextExtractor;
 import fit.ctu.cz.vwm.model.AudioDocument;
 import fit.ctu.cz.vwm.model.GenreResult;
 
 public class SimpleBUsiness implements Business {
-	InstrumentExtractor insturmentExtrc;
+	List<Extractor> extractors;
+
+	public SimpleBUsiness() {
+		extractors = new ArrayList<>();
+		extractors.add(new InstrumentExtractor());
+		extractors.add(new SongTextExtractor());// need to be before lyrics extractor
+		extractors.add(new LyricsExtractor());
+	}
 
 	@Override
 	public String extract(File mp3File) throws IOException, UnsupportedAudioFileException,
@@ -81,11 +93,9 @@ public class SimpleBUsiness implements Business {
 
 	@Override
 	public void extractFeatures(AudioDocument aDoc) {
-		// instruments
-		aDoc.setInstruments(insturmentExtrc.extract());
-		aDoc.
-		// song_text
-		// lyrics
+		for (Extractor ex : extractors) {
+			ex.extract(aDoc);
+		}
 		// tempo
 		// genre
 		// description
@@ -93,7 +103,6 @@ public class SimpleBUsiness implements Business {
 		// love_factor
 		// singing
 		// rhytmus
-		//tacts
 		// song_type
 		// band_name
 
