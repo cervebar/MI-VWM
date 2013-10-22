@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Mpeg7 xmlns="urn:mpeg:mpeg7:schema:2001" xmlns:mpeg7="urn:mpeg:mpeg7:schema:2001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg7:schema:2001 http://www.ient.rwth-aachen.de/team/crysandt/mpeg7mds/mpeg7ver1.xsd ">
+<Description xsi:type="ContentEntityType">
+<MultimediaContent xsi:type="AudioType">
+<Audio xsi:type="AudioSegmentType">
+<MediaInformation xsi:type="MediaInformationType">
+<MediaProfile xsi:type="MediaProfileType">
+<MediaInstance xsi:type="MediaInstanceType">
+<InstanceIdentifier xsi:type="UniqueIDType">UniqueID0000000002</InstanceIdentifier>
+<MediaLocator xsi:type="MediaLocatorType">
+<MediaUri>file:/D:/workspace/VMW/dataset/test/Foo%20Fighters%20-%20The%20Pretender.mp3</MediaUri>
+</MediaLocator>
+</MediaInstance>
+</MediaProfile>
+</MediaInformation>
+</Audio>
+</MultimediaContent>
+</Description>
+</Mpeg7>
