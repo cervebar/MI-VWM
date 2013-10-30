@@ -22,8 +22,14 @@ public class Calc {
 	}
 	public static double StandardDeviation(String vals, Double mean){
 		double result = 0;
-		// TODO
-		return result;
+		
+		ArrayList<Double> arr = convertStringToVals(vals);
+		for(Double d : arr){
+			// sum of squares
+			result += Math.pow(d-mean,2);
+		}
+		// square root of mean
+		return Math.sqrt(mean/vals.length());
 	}
 	public static double MeanValue(String vals){
 		

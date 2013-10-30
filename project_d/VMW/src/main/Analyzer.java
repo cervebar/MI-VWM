@@ -77,7 +77,11 @@ public class Analyzer {
 			
 			for(int i = 0; i < xml.descriptors.size(); i++){
 				out.write(xml.descriptors.get(i)+ ": ");
-				out.write(Double.toString(Calc.MeanValue(xml.vals.get(i))));
+				double meanval = Calc.MeanValue(xml.vals.get(i)); 
+				out.write(Double.toString(meanval));
+				out.write("\n");
+				double stdev = Calc.StandardDeviation(xml.vals.get(i),meanval);
+				out.write("STDev-" + xml.descriptors.get(i) + ": " + Double.toString(stdev));
 				out.write("\n");
 			}
 			out.close();
