@@ -6,6 +6,15 @@ import it.sauronsoftware.jave.EncodingAttributes;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+import de.crysandt.audio.AudioInFloatSampled;
+import de.crysandt.audio.mpeg7audio.MP7DocumentBuilder;
+import de.crysandt.audio.mpeg7audio.mci.MediaHelper;
+import de.crysandt.audio.mpeg7audio.mci.MediaInformation;
+import de.crysandt.xml.Namespace;
 
 public class Main {
 
@@ -25,25 +34,18 @@ public class Main {
 
 		// general //
 		conf.add("AudioPower"); // quick summary of signal
-
 		conf.add("AudioSpectrumEnvelope"); // short term power spectrum,
-											// display, synthesize, gpsearch
-		conf.add("AudioSpectrumCentroidSpread", 2); // dominated by low/high
-													// freq? , 2 vals
 
+		conf.add("AudioSpectrumCentroidSpread", 2); // dominated by low/high
 		conf.add("SoundModel", 25); // pracuje dlouho, 25 vals
 		conf.add("BackgroundNoiseLevel"); //
 		conf.add("DcOffset");
 		conf.add("BandWidth");
-
 		conf.add("AudioSpectrumFlatness"); // presence of tonal components
 
 		// periodic or quasi-periodic signals
 		conf.add("AudioFundamentalFrequency"); // pitch tracking, confidence
-												// measure
 		conf.add("AudioHarmonicity", 2); // distinction between
-											// harmonic/inharmonic/nonharmonic
-											// spectrum // 2 vals
 
 		// tone color or tone quality, temporal char. of sound segments
 		conf.add("LogAttackTime"); // from 0 to max level sound
@@ -51,24 +53,17 @@ public class Main {
 
 		// spectral features in linear-freq state
 		conf.add("SpectralCentroid"); // distinguishing musical instruments
-										// timbres
 		conf.add("HarmonicSpectralCentroid"); //
 		conf.add("HarmonicSpectralDeviation"); // hazi error
 		conf.add("HarmonicSpectralSpread"); //
 		conf.add("HarmonicSpectralVariation"); //
 
 		// low-dimensional projections of a spectral space to aid compactness
-		// and recognition, 2vals
 		conf.add("AudioSpectrumBasisProjection", 2); //
-		// // AudioSpectrumBasis:a series of (time-varying / statistically
-		// independent) basis functions derived from the singular value
-		// decomposition of a normalized power spectrum.
-		// // AudioSpectrumProjection: low-d features of a spectrum after
-		// projection upon a reduced rank basis
 
-		// convert to wav
 		for (File source : fm.files) {
 
+			// ************** convert to wav ******************* //
 			File target = new File(source.getName().substring(0,
 					source.getName().indexOf("."))
 					+ ".wav");
@@ -79,40 +74,50 @@ public class Main {
 			attrs.setAudioAttributes(audio);
 			Encoder enc = new Encoder();
 			enc.encode(source, target, attrs);
-		}
+			// use jaudio by cmdline{
 
-		// use jaudio by cmdline{
-		for (File source : fm.files) {
 			String resfile = source.getName().substring(0,
 					source.getName().indexOf("."))
 					+ ".xml";
 			String command = "cmd /c java -jar jaudio.jar -s settings.xml "
-					+ resfile + " " + source.getAbsolutePath();
+					+ "res" + " " + target.getAbsolutePath();
+			System.out.println(command);
 			Process p = Runtime.getRuntime().exec(command);
 			p.waitFor();
 			System.out.println("jAudio finished!");
-		}
 
-		// extract mpeg7
-		/*
-		 * for (File f : fm.files) { try {
-		 * 
-		 * AudioInFloatSampled audioin = new AudioInFloatSampled(f);
-		 * MP7DocumentBuilder mp7out = new MP7DocumentBuilder();
-		 * mp7out.addSchemaLocation(Namespace.MPEG7,
-		 * "http://www.ient.rwth-aachen.de/team/crysandt/mpeg7mds/mpeg7ver1.xsd"
-		 * );
-		 * 
-		 * MediaInformation mi = MediaHelper.createMediaInformation();
-		 * MediaHelper.setMediaLocation(mi, f.toURI());
-		 * mp7out.setMediaInformation(mi);
-		 * 
-		 * Analyzer a = new Analyzer(audioin, conf, mp7out, f);
-		 * ArrayList<String> v = a.encode(); v.add(0, f.getName());
-		 * values.add(v); } catch (UnsupportedAudioFileException ex) {
-		 * System.out.println("Cant read audiofile:" + f.getName()); } }
-		 * XLSMaker.createFromInfo();
-		 */
+			// transform jaudio output to descriptions and values
+			File fv = new File("resFV.xml");
+			File fk = new File("resFK.xml");
+			HashMap<String, ArrayList<String>> map = JAudioParser.parseFV(fv);
+
+			// extract mpeg7
+			try {
+
+				AudioInFloatSampled audioin = new AudioInFloatSampled(source);
+				MP7DocumentBuilder mp7out = new MP7DocumentBuilder();
+				mp7out.addSchemaLocation(Namespace.MPEG7,
+						"http://www.ient.rwth-aachen.de/team/crysandt/mpeg7mds/mpeg7ver1.xsd");
+
+				MediaInformation mi = MediaHelper.createMediaInformation();
+				MediaHelper.setMediaLocation(mi, source.toURI());
+				mp7out.setMediaInformation(mi);
+
+				Analyzer a = new Analyzer(audioin, conf, mp7out, source, map);
+				ArrayList<String> v = a.encode();
+				v.add(0, source.getName());
+				values.add(v);
+			} catch (UnsupportedAudioFileException ex) {
+				System.out.println("Cant read audiofile:" + source.getName());
+			}
+
+			// file cleanup
+			target.delete();
+			fv.delete();
+			fk.delete();
+		}
+		XLSMaker.createFromInfo();
+
 	}
 
 	public static ArrayList<String> XLSHeaders() {
