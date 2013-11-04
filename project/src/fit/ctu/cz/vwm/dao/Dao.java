@@ -1,13 +1,9 @@
 package fit.ctu.cz.vwm.dao;
 
-import fit.ctu.cz.vwm.model.AudioDocument;
+public interface Dao<T> {
 
-public interface Dao {
+	T getDocument(String id) throws Exception;
 
-	AudioDocument getAudioDocument(String id);
-
-	void save(AudioDocument aDoc);
-
-	String getUniqueIDForAudioDocument();
+	void save(T doc) throws Exception;
 
 }

@@ -28,9 +28,9 @@ import de.crysandt.audio.mpeg7audio.mci.MediaHelper;
 import de.crysandt.audio.mpeg7audio.mci.MediaInformation;
 import de.crysandt.xml.Namespace;
 import fit.ctu.cz.vwm.business.extract.Extractor;
-import fit.ctu.cz.vwm.business.extract.instrument.InstrumentExtractor;
-import fit.ctu.cz.vwm.business.extract.lyrics.LyricsExtractor;
-import fit.ctu.cz.vwm.business.extract.text.SongTextExtractor;
+import fit.ctu.cz.vwm.business.extract.InstrumentExtractor;
+import fit.ctu.cz.vwm.business.extract.LyricsExtractor;
+import fit.ctu.cz.vwm.business.extract.SongTextExtractor;
 import fit.ctu.cz.vwm.model.AudioDocument;
 import fit.ctu.cz.vwm.model.GenreResult;
 
