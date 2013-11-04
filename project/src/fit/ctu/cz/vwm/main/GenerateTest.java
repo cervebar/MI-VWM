@@ -22,7 +22,7 @@ import de.crysandt.audio.mpeg7audio.mci.MediaHelper;
 import de.crysandt.audio.mpeg7audio.mci.MediaInformation;
 import de.crysandt.xml.Namespace;
 
-public class Main {
+public class GenerateTest {
 
 	public static void main(String[] args) {
 		try {
