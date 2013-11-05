@@ -1,68 +1,68 @@
-AudioFundamentalFrequencyType: 347.8753057025227
-STDev-AudioFundamentalFrequencyType: 0.0288412152246414
-HarmonicRatio: 0.7628897600116413
-STDev-HarmonicRatio: 0.0017984837066316343
-UpperLimitOfHarmonicity: 4187.714370348813
-STDev-UpperLimitOfHarmonicity: 0.16275008261524074
+AudioFundamentalFrequencyType: 516.317403389588
+STDev-AudioFundamentalFrequencyType: 0.03537169573508311
+HarmonicRatio: 0.5680128382651309
+STDev-HarmonicRatio: 0.0015465947393300964
+UpperLimitOfHarmonicity: 6787.183511412298
+STDev-UpperLimitOfHarmonicity: 0.20158186342780524
 AudioPowerType: 0.03789746222844689
 STDev-AudioPowerType: 3.765591521391812E-4
-AudioSpectrumBasisType: 0.021324243765441182
-STDev-AudioSpectrumBasisType: 0.0025932160340747298
-AudioSpectrumProjectionType: 49.57946422999405
-STDev-AudioSpectrumProjectionType: 0.004364806287820038
-AudioSpectrumCentroidType: -3.2275318866166582
+AudioSpectrumBasisType: 0.019681012662500004
+STDev-AudioSpectrumBasisType: 0.0024932639929930262
+AudioSpectrumProjectionType: 48.41928935632302
+STDev-AudioSpectrumProjectionType: 0.004310024687101844
+AudioSpectrumCentroidType: -2.886214152670494
 STDev-AudioSpectrumCentroidType: NaN
-AudioSpectrumEnvelopeType: 0.001113901728527265
-STDev-AudioSpectrumEnvelopeType: 1.0664635224674297E-5
-AudioSpectrumFlatnessType: 0.7345345275765175
-STDev-AudioSpectrumFlatnessType: 3.5766963957146655E-4
-AudioSpectrumSpreadType: 2.096220522539074
-STDev-AudioSpectrumSpreadType: 0.003063444034957066
+AudioSpectrumEnvelopeType: 0.0011139016712834653
+STDev-AudioSpectrumEnvelopeType: 1.0664946936432273E-5
+AudioSpectrumFlatnessType: 0.7574724994918826
+STDev-AudioSpectrumFlatnessType: 3.635334995974439E-4
+AudioSpectrumSpreadType: 2.1213429159461206
+STDev-AudioSpectrumSpreadType: 0.003081339531877866
 LogAttackTimeType: 1.8216405
 STDev-LogAttackTimeType: 0.449893876375307
-SpectralCentroidType: 430.49457
-STDev-SpectralCentroidType: 6.916121022654245
+SpectralCentroidType: 490.74814
+STDev-SpectralCentroidType: 7.3842786452781635
 TemporalCentroidType: 113.03333
 STDev-TemporalCentroidType: 3.543904469492496
-HarmonicSpectralCentroidType: 1546.6923
-STDev-HarmonicSpectralCentroidType: 13.109336367642719
-HarmonicSpectralDeviationType: 0.2051288
-STDev-HarmonicSpectralDeviationType: 0.150970490126014
-HarmonicSpectralSpreadType: 0.8782243
-STDev-HarmonicSpectralSpreadType: 0.31237874091842066
-HarmonicSpectralVariationType: 0.16884969
-STDev-HarmonicSpectralVariationType: 0.12994217560130353
+HarmonicSpectralCentroidType: 1651.0656
+STDev-HarmonicSpectralCentroidType: 13.5444355118009
+HarmonicSpectralDeviationType: 0.18207836
+STDev-HarmonicSpectralDeviationType: 0.13493641465519973
+HarmonicSpectralSpreadType: 0.75698996
+STDev-HarmonicSpectralSpreadType: 0.2751345052878682
+HarmonicSpectralVariationType: 0.1397615
+STDev-HarmonicSpectralVariationType: 0.12461563126492421
 BackgroundNoiseLevel: -110.8099
 STDev-BackgroundNoiseLevel: NaN
 DcOffset: 1.0E-4
 STDev-DcOffset: 0.004082482904638631
-BandWidth: 12575.3906
-STDev-BandWidth: 35.461797190779826
-Root Mean Square Overall Standard Deviation: 0.04547
+BandWidth: 12683.0566
+STDev-BandWidth: 35.61327926490342
+Root Mean Square Overall Standard Deviation: 0.1028
 Method of Moments Overall Average: NaN
-Fraction Of Low Energy Windows Overall Average: 0.5279
-Compactness Overall Average: 1572.0
+Fraction Of Low Energy Windows Overall Average: 0.5315
+Compactness Overall Average: 1461.0
 LPC Overall Average: NaN
-Strongest Beat Overall Standard Deviation: 37.16
-Spectral Centroid Overall Average: 29.67
-Spectral Centroid Overall Standard Deviation: 25.46
-Zero Crossings Overall Average: 76.62
-Spectral Variability Overall Average: 0.002281
+Strongest Beat Overall Standard Deviation: 22.24
+Spectral Centroid Overall Average: 22.65
+Spectral Centroid Overall Standard Deviation: 22.49
+Zero Crossings Overall Average: 58.25
+Spectral Variability Overall Average: 0.004038
 LPC Overall Standard Deviation: NaN
 Method of Moments Overall Standard Deviation: NaN
-Strength Of Strongest Beat Overall Standard Deviation: 0.009786
-Compactness Overall Standard Deviation: 363.2
-Spectral Rolloff Point Overall Average: 0.2107
+Strength Of Strongest Beat Overall Standard Deviation: NaN
+Compactness Overall Standard Deviation: 479.8
+Spectral Rolloff Point Overall Average: 0.1548
 MFCC Overall Average: NaN
-Fraction Of Low Energy Windows Overall Standard Deviation: 0.09428
-Strongest Beat Overall Average: 190.0
-Spectral Variability Overall Standard Deviation: 0.001194
-Strength Of Strongest Beat Overall Average: 0.01079
-Beat Sum Overall Average: 276.5
-Root Mean Square Overall Average: 0.09605
+Fraction Of Low Energy Windows Overall Standard Deviation: 0.1604
+Strongest Beat Overall Average: 209.8
+Spectral Variability Overall Standard Deviation: 0.002656
+Strength Of Strongest Beat Overall Average: NaN
+Beat Sum Overall Average: 899.6
+Root Mean Square Overall Average: 0.165
 MFCC Overall Standard Deviation: NaN
-Zero Crossings Overall Standard Deviation: 50.78
-Spectral Flux Overall Average: 0.001036
-Beat Sum Overall Standard Deviation: 104.2
-Spectral Rolloff Point Overall Standard Deviation: 0.22
-Spectral Flux Overall Standard Deviation: 0.001202
+Zero Crossings Overall Standard Deviation: 45.07
+Spectral Flux Overall Average: 0.003494
+Beat Sum Overall Standard Deviation: 524.8
+Spectral Rolloff Point Overall Standard Deviation: 0.1766
+Spectral Flux Overall Standard Deviation: 0.005796

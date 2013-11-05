@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<!DOCTYPE feature_vector_file [
+   <!ELEMENT feature_vector_file (comments, data_set+)>
+   <!ELEMENT comments (#PCDATA)>
+   <!ELEMENT data_set (data_set_id, section*, feature*)>
+   <!ELEMENT data_set_id (#PCDATA)>
+   <!ELEMENT section (feature+)>
+   <!ATTLIST section start CDATA ""
+                     stop CDATA "">
+   <!ELEMENT feature (name, v+)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT v (#PCDATA)>
+]>
+
+<feature_vector_file>
+
+   <comments></comments>
+
+	<data_set>
+		<data_set_id>C:\Users\dave\Documents\GitHub\MI-VWM\project_d\VMW\KatyPerry-LastFridayNight.wav</data_set_id>
+		<feature>
+			<name>Spectral Centroid Overall Standard Deviation</name>
+			<v>1.861E1</v>
+		</feature>
+		<feature>
+			<name>Spectral Rolloff Point Overall Standard Deviation</name>
+			<v>1.845E-1</v>
+		</feature>
+		<feature>
+			<name>Spectral Flux Overall Standard Deviation</name>
+			<v>1.328E-2</v>
+		</feature>
+		<feature>
+			<name>Compactness Overall Standard Deviation</name>
+			<v>1.933E2</v>
+		</feature>
+		<feature>
+			<name>Spectral Variability Overall Standard Deviation</name>
+			<v>3.071E-3</v>
+		</feature>
+		<feature>
+			<name>Root Mean Square Overall Standard Deviation</name>
+			<v>1.138E-1</v>
+		</feature>
+		<feature>
+			<name>Fraction Of Low Energy Windows Overall Standard Deviation</name>
+			<v>7.195E-2</v>
+		</feature>
+		<feature>
+			<name>Zero Crossings Overall Standard Deviation</name>
+			<v>3.986E1</v>
+		</feature>
+		<feature>
+			<name>Strongest Beat Overall Standard Deviation</name>
+			<v>1.238E1</v>
+		</feature>
+		<feature>
+			<name>Beat Sum Overall Standard Deviation</name>
+			<v>7.206E2</v>
+		</feature>
+		<feature>
+			<name>Strength Of Strongest Beat Overall Standard Deviation</name>
+			<v>5.01E-4</v>
+		</feature>
+		<feature>
+			<name>MFCC Overall Standard Deviation</name>
+			<v>1.766E1</v>
+			<v>4.785E0</v>
+			<v>4.622E0</v>
+			<v>2.821E0</v>
+			<v>2.663E0</v>
+			<v>2.233E0</v>
+			<v>2.067E0</v>
+			<v>1.992E0</v>
+			<v>1.913E0</v>
+			<v>1.724E0</v>
+			<v>1.913E0</v>
+			<v>1.768E0</v>
+			<v>1.605E0</v>
+		</feature>
+		<feature>
+			<name>LPC Overall Standard Deviation</name>
+			<v>1.361E-1</v>
+			<v>3.704E-1</v>
+			<v>2.159E-1</v>
+			<v>1.654E-1</v>
+			<v>1.396E-1</v>
+			<v>1.341E-1</v>
+			<v>1.326E-1</v>
+			<v>1.23E-1</v>
+			<v>1.042E-1</v>
+			<v>0E0</v>
+		</feature>
+		<feature>
+			<name>Method of Moments Overall Standard Deviation</name>
+			<v>3.881E-1</v>
+			<v>2.158E1</v>
+			<v>1.61E3</v>
+			<v>1.139E5</v>
+			<v>2.118E7</v>
+		</feature>
+		<feature>
+			<name>Spectral Centroid Overall Average</name>
+			<v>2.625E1</v>
+		</feature>
+		<feature>
+			<name>Spectral Rolloff Point Overall Average</name>
+			<v>2.028E-1</v>
+		</feature>
+		<feature>
+			<name>Spectral Flux Overall Average</name>
+			<v>8.912E-3</v>
+		</feature>
+		<feature>
+			<name>Compactness Overall Average</name>
+			<v>1.606E3</v>
+		</feature>
+		<feature>
+			<name>Spectral Variability Overall Average</name>
+			<v>7.11E-3</v>
+		</feature>
+		<feature>
+			<name>Root Mean Square Overall Average</name>
+			<v>2.997E-1</v>
+		</feature>
+		<feature>
+			<name>Fraction Of Low Energy Windows Overall Average</name>
+			<v>6.33E-1</v>
+		</feature>
+		<feature>
+			<name>Zero Crossings Overall Average</name>
+			<v>7.203E1</v>
+		</feature>
+		<feature>
+			<name>Strongest Beat Overall Average</name>
+			<v>1.737E2</v>
+		</feature>
+		<feature>
+			<name>Beat Sum Overall Average</name>
+			<v>2.529E3</v>
+		</feature>
+		<feature>
+			<name>Strength Of Strongest Beat Overall Average</name>
+			<v>9.44E-3</v>
+		</feature>
+		<feature>
+			<name>MFCC Overall Average</name>
+			<v>-8.598E1</v>
+			<v>1.294E-1</v>
+			<v>-8.585E-1</v>
+			<v>2.016E-1</v>
+			<v>4.523E-1</v>
+			<v>5.476E-1</v>
+			<v>7.591E-1</v>
+			<v>9.133E-2</v>
+			<v>6.614E-1</v>
+			<v>-1.611E-1</v>
+			<v>-5.836E-1</v>
+			<v>3.197E-1</v>
+			<v>-1.464E-1</v>
+		</feature>
+		<feature>
+			<name>LPC Overall Average</name>
+			<v>-8.63E-1</v>
+			<v>2.11E-1</v>
+			<v>-1.491E-1</v>
+			<v>-4.109E-2</v>
+			<v>-1.01E-2</v>
+			<v>-6.332E-2</v>
+			<v>-6.157E-2</v>
+			<v>-4.321E-3</v>
+			<v>-1.561E-2</v>
+			<v>0E0</v>
+		</feature>
+		<feature>
+			<name>Method of Moments Overall Average</name>
+			<v>9.358E-1</v>
+			<v>6.507E1</v>
+			<v>4.293E3</v>
+			<v>2.852E5</v>
+			<v>6.233E7</v>
+		</feature>
+	</data_set>
+
+</feature_vector_file>

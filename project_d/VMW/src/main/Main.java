@@ -64,9 +64,11 @@ public class Main {
 		for (File source : fm.files) {
 
 			// ************** convert to wav ******************* //
-			File target = new File(source.getName().substring(0,
-					source.getName().indexOf("."))
+			File target = new File(source.getName()
+					.substring(0, source.getName().indexOf("."))
+					.replaceAll(" ", "")
 					+ ".wav");
+
 			AudioAttributes audio = new AudioAttributes();
 			audio.setCodec("pcm_s16le");
 			EncodingAttributes attrs = new EncodingAttributes();
@@ -113,8 +115,9 @@ public class Main {
 
 			// file cleanup
 			target.delete();
-			fv.delete();
 			fk.delete();
+			fv.delete();
+
 		}
 		XLSMaker.createFromInfo();
 

@@ -15,7 +15,6 @@ import de.crysandt.audio.mpeg7audio.Config;
 import de.crysandt.audio.mpeg7audio.ConfigDefault;
 import de.crysandt.audio.mpeg7audio.Encoder;
 import de.crysandt.audio.mpeg7audio.MP7DocumentBuilder;
-import de.crysandt.audio.mpeg7audio.Ticker;
 
 public class Analyzer {
 	AudioInFloatSampled a;
@@ -47,7 +46,7 @@ public class Analyzer {
 	public ArrayList<String> encode() {
 		Encoder encoder = new Encoder(a.getSampleRate(), mp7, c);
 		// add 0:00, 0:01, ... output
-		encoder.addTimeElapsedListener(new Ticker(System.err));
+		// encoder.addTimeElapsedListener(new Ticker(System.err));
 		// copy audio signal from source to encoder
 		float[] audio;
 		while ((audio = a.get()) != null) {
