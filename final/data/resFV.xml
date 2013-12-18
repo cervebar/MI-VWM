@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE feature_vector_file [
+   <!ELEMENT feature_vector_file (comments, data_set+)>
+   <!ELEMENT comments (#PCDATA)>
+   <!ELEMENT data_set (data_set_id, section*, feature*)>
+   <!ELEMENT data_set_id (#PCDATA)>
+   <!ELEMENT section (feature+)>
+   <!ATTLIST section start CDATA ""
+                     stop CDATA "">
+   <!ELEMENT feature (name, v+)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT v (#PCDATA)>
+]>
+
+<feature_vector_file>
+
+   <comments></comments>
+
+	<data_set>
+		<data_set_id>0000aa.wav</data_set_id>
+		<feature>
+			<name>Spectral Centroid Overall Standard Deviation</name>
+			<v>1.687E1</v>
+		</feature>
+		<feature>
+			<name>Compactness Overall Standard Deviation</name>
+			<v>1.869E2</v>
+		</feature>
+		<feature>
+			<name>Root Mean Square Overall Standard Deviation</name>
+			<v>1.11E-1</v>
+		</feature>
+		<feature>
+			<name>Derivative of Root Mean Square Overall Standard Deviation</name>
+			<v>7.388E-2</v>
+		</feature>
+		<feature>
+			<name>Zero Crossings Overall Standard Deviation</name>
+			<v>3.571E1</v>
+		</feature>
+		<feature>
+			<name>Beat Sum Overall Standard Deviation</name>
+			<v>6.682E2</v>
+		</feature>
+		<feature>
+			<name>Strength Of Strongest Beat Overall Standard Deviation</name>
+			<v>5.875E-4</v>
+		</feature>
+		<feature>
+			<name>Spectral Centroid Overall Average</name>
+			<v>2.561E1</v>
+		</feature>
+		<feature>
+			<name>Compactness Overall Average</name>
+			<v>1.574E3</v>
+		</feature>
+		<feature>
+			<name>Root Mean Square Overall Average</name>
+			<v>2.766E-1</v>
+		</feature>
+		<feature>
+			<name>Derivative of Root Mean Square Overall Average</name>
+			<v>-2.991E-20</v>
+		</feature>
+		<feature>
+			<name>Zero Crossings Overall Average</name>
+			<v>6.929E1</v>
+		</feature>
+		<feature>
+			<name>Beat Sum Overall Average</name>
+			<v>2.172E3</v>
+		</feature>
+		<feature>
+			<name>Strength Of Strongest Beat Overall Average</name>
+			<v>9.198E-3</v>
+		</feature>
+	</data_set>
+
+</feature_vector_file>

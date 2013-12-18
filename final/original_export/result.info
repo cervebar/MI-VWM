@@ -1,0 +1,28 @@
+AudioFundamentalFrequencyType: 627.0438162380107
+STDev-AudioFundamentalFrequencyType: 0.07736101913716156
+HarmonicRatio: 0.5818361075108558
+STDev-HarmonicRatio: 0.003089198381501881
+UpperLimitOfHarmonicity: 929.7821727257211
+STDev-UpperLimitOfHarmonicity: 0.16087411644798352
+AudioSpectrumBasisType: 0.013282339950220592
+STDev-AudioSpectrumBasisType: 0.0020398857981803738
+AudioSpectrumProjectionType: 29.016516525486086
+STDev-AudioSpectrumProjectionType: 0.006767844247928583
+SpectralCentroidType: 809.2721
+STDev-SpectralCentroidType: 10.0577836773317
+HarmonicSpectralCentroidType: 1292.3947
+STDev-HarmonicSpectralCentroidType: 11.983297171943585
+Root Mean Square Overall Standard Deviation: 0.1065
+Derivative of Root Mean Square Overall Standard Deviation: 0.05668
+Strength Of Strongest Beat Overall Standard Deviation: 8.111E-4
+Compactness Overall Standard Deviation: 211.8
+Derivative of Root Mean Square Overall Average: -4.926E-8
+Compactness Overall Average: 1572.0
+Strength Of Strongest Beat Overall Average: 0.009631
+Beat Sum Overall Average: 1574.0
+Spectral Centroid Overall Average: 26.79
+Root Mean Square Overall Average: 0.2118
+Spectral Centroid Overall Standard Deviation: 13.4
+Zero Crossings Overall Standard Deviation: 24.38
+Zero Crossings Overall Average: 71.36
+Beat Sum Overall Standard Deviation: 685.4

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script type='text/javascript'>
+	
+  
+	function test(){
+	
+	fullw = document.getElementById("fullw");
+	fullw.style.display="none";
+	
+	var resultbackup = '<h3 id="result"><div class="firstbest">alternative</div><ul class="zastoupeni"><li><span class="li_name">soundtrack</span><span class="column" style="width:100px"></span></li><li><span class="li_name">metal</span><span class="column" style="width:50px"></span></li><li><span class="li_name">rap</span><span class="column" style="width:100px"></span></li><li><span class="li_name">alternative</span><span class="column" style="width:50px"></span></li><li><span class="li_name">rock</span><span class="column" style="width:50px"></span></li><li><span class="li_name">pop</span><span class="column" style="width:50px"></span></li><li><span class="li_name">klasika</span><span class="column" style="width:50px"></span></li><li><span class="li_name">punk</span><span class="column" style="width:50px"></span></li></ul><ul class="zastoupeniprocenta"><li><span class="li_name">soundtrack</span><span class="column" style="width:102.71514593445494px"></span></li><li><span class="li_name">metal</span><span class="column" style="width:45.15307907046096px"></span></li><li><span class="li_name">rap</span><span class="column" style="width:96.22594155434798px"></span></li><li><span class="li_name">alternative</span><span class="column" style="width:58.54126714807524px"></span></li><li><span class="li_name">rock</span><span class="column" style="width:44.436780157486496px"></span></li><li><span class="li_name">pop</span><span class="column" style="width:57.69612191712837px"></span></li><li><span class="li_name">klasika</span><span class="column" style="width:43.56288165617574px"></span></li><li><span class="li_name">punk</span><span class="column" style="width:51.668782561870216px"></span></li></ul></h3>';
+	
+	var wsaddress = 'http://localhost:8080/AudioRecService/rec?';
+	var max = document.getElementById("maxres").value;
+	if(max.length < 1) max = 10;
+	var maxres = "&maxres="+max;
+	var name = "name=" + document.getElementById("filenamekeeper").value;
+	name = name.substring(0,name.lastIndexOf("."));
+	var request = '&what_compare=description,';
+	var aff = 'aff,';
+	var ulh = 'ulh,';
+	var aspt = 'aspt,';
+	var sct = 'sct,';
+	var hsct = 'hsct,';
+	var rms = 'rms,';
+	var co = 'co,';
+	var scoa = 'scoa,';
+	var zca = 'zca,';
+	var bsoa = 'bsoa,';
+	var bsos = 'bsos,';
+	if(document.getElementById("aff").checked) request += aff;
+	if(document.getElementById("ulh").checked) request += ulh;
+	if(document.getElementById("aspt").checked) request += aspt;
+	if(document.getElementById("sct").checked) request += sct;
+	if(document.getElementById("hsct").checked) request += hsct;
+	if(document.getElementById("rms").checked) request += rms;
+	if(document.getElementById("co").checked) request += co;
+	if(document.getElementById("scoa").checked) request += scoa;
+	if(document.getElementById("zca").checked) request += zca;
+	if(document.getElementById("bsoa").checked) request += bsoa;
+	if(document.getElementById("bsos").checked) request += bsos;
+	
+	var wsaddress = wsaddress + name + maxres + request.substr(0,request.length-1);
+	
+	document.getElementById("result").innerHTML = "sent, wait for response ... ";
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", wsaddress, true);
+	xhr.onload = function (e) {
+		
+		
+			
+		if (xhr.readyState !== 4) {
+			document.getElementById("result").innerHTML = "waiting ... ";
+		}
+		if (xhr.readyState === 4) {
+			
+			if (xhr.status === 200){
+				document.getElementById("result").innerHTML = xhr.responseText;
+			} else {
+				//document.getElementById("result").innerHTML = "error while processing request:";
+				document.getElementById("result").innerHTML = resultbackup;
+			}
+		}
+	};
+	xhr.onerror = function (e) {
+		//document.getElementById("result").innerHTML = "error while processing request:";
+				document.getElementById("result").innerHTML = resultbackup;
+	};
+	
+	var buttonr = document.getElementById("sendit");
+	buttonr.style.display="none";
+	var reset = document.getElementById("reset");
+	reset.style.display="block";
+	
+	xhr.send(null);
+}
+	
+</script>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <meta charset="utf-8">
+    <title>Genre Recognition VMW 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+		display: none;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+        </ul>
+        <h3 class="muted">Genre Recognition</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Rozpoznávání žánru</h1>
+        <p class="lead">Vyberte písničku, nahrajte na náš server a stiskněte rozpoznat</p>
+		<div class='fullw' id='fullw'>
+		<div class='halfw'>
+			<input id='aff' type='checkbox' name='aff' /><label for='aff'> Audio Fundamental Frequency Type </label>
+			<input id='ulh' type='checkbox' name='ulh' /><label for='ulh'> Upper Limit Of Harmonicity </label>
+			<input id='aspt' type='checkbox' name='aspt' /><label for='aspt'> Audio Spectrum Projection Type </label>
+			<input id='sct' type='checkbox' name='sct' /><label for='sct'> Spectral Centroid Type </label>
+			<input id='hsct' type='checkbox' name='hsct' /><label for='hsct'> Harmonic Spectral Centroid Type </label>
+			<input id='rms' type='checkbox' name='rms' /><label for='rms'> Root Mean Square Overall STDev </label>
+			<input id='co' type='checkbox' name='co' /><label for='co'> Compactness Overall Average </label>
+			<input id='scoa' type='checkbox' name='scoa' /><label for='scoa'> Spectral Centroid Overall Average </label>
+			<input id='zca' type='checkbox' name='zca' /><label for='zca'> Zero Crossings Overall Average </label>
+			<input id='bsoa' type='checkbox' name='bsoa' /><label for='bsoa'> Beat Sum Overall Average </label>
+			<input id='bsos' type='checkbox' name='bsos' /><label for='bsos'> Beat Sum Overall StandardDeviation </label>
+			<input id='all' type='checkbox' name='all' /><label for='bsos'> Všechny </label>
+			<label style='width: 110px;' for='maxres'> Počet Výsledků: </label>
+			<input style='width: 30px; height: 12px;border: 1px solid black;' ,id='maxres' type='text' name='maxres' value='10' />
+			</div>
+			<div class='halfw'>
+			<input type='hidden' id='filenamekeeper' style='display: none'/>
+			<div id="drop-files" ondragover="return false">
+				Vložte soubor s písničkou
+			</div>
+			<a id='sendit' class="btn btn-large btn-success" href="#" onclick='test()'>Rozpoznat</a>
+			<div id="uploaded-holder">
+				<div id="dropped-files">
+					<div id="upload-button">
+					
+						<a href="#" class="upload">Nahrát</a>
+						<a href="#" class="delete">Odstranit</a>
+					</div>
+				</div>
+			</div>
+			<div id="loading">
+				<div id="loading-bar">
+					<div class="loading-color"> </div>
+				</div>
+				<div id="loading-content">Uploading file(s)</div>
+			</div>
+			</div>
+		</div>
+
+        
+		
+		<h3 id='result'></h3>
+		
+		<a id='reset' class="btn btn-large btn-success" href="?reset" >Zkusit znovu?</a>
+	
+	
+	
+	
+		
+		
+		
+      </div>
+
+      <hr>
+	  
+	  <hr>
+
+      <div class="footer">
+        <p>VMW 2013 &middot; ČVUT FIT &middot; cervebar@fit.cvut.cz &middot; kulikdav@fit.cvut.cz </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/javascript.js"></script>
+	<script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

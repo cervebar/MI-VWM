@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE feature_key_file [
+   <!ELEMENT feature_key_file (comments, feature+)>
+   <!ELEMENT comments (#PCDATA)>
+   <!ELEMENT feature (name, description?, is_sequential, parallel_dimensions)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT description (#PCDATA)>
+   <!ELEMENT is_sequential (#PCDATA)>
+   <!ELEMENT parallel_dimensions (#PCDATA)>
+]>
+
+<feature_key_file>
+
+   <comments></comments>
+
+	<feature>
+		<name>Spectral Centroid Overall Standard Deviation</name>
+		<description>The centre of mass of the power spectrum.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Compactness Overall Standard Deviation</name>
+		<description>A measure of the noisiness of a signal. Found by comparing the components of a window's magnitude spectrum with the magnitude spectrum of its neighbouring windows.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Root Mean Square Overall Standard Deviation</name>
+		<description>A measure of the power of a signal.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Derivative of Root Mean Square Overall Standard Deviation</name>
+		<description>Derivative of Root Mean Square.A measure of the power of a signal.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Zero Crossings Overall Standard Deviation</name>
+		<description>The number of times the waveform changed sign. An indication of frequency as well as noisiness.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Beat Sum Overall Standard Deviation</name>
+		<description>The sum of all entries in the beat histogram. This is a good measure of the importance of regular beats in a signal.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Strength Of Strongest Beat Overall Standard Deviation</name>
+		<description>How strong the strongest beat in the beat histogram is compared to other potential beats.
+This is the overall standard deviation over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Spectral Centroid Overall Average</name>
+		<description>The centre of mass of the power spectrum.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Compactness Overall Average</name>
+		<description>A measure of the noisiness of a signal. Found by comparing the components of a window's magnitude spectrum with the magnitude spectrum of its neighbouring windows.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Root Mean Square Overall Average</name>
+		<description>A measure of the power of a signal.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Derivative of Root Mean Square Overall Average</name>
+		<description>Derivative of Root Mean Square.A measure of the power of a signal.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Zero Crossings Overall Average</name>
+		<description>The number of times the waveform changed sign. An indication of frequency as well as noisiness.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Beat Sum Overall Average</name>
+		<description>The sum of all entries in the beat histogram. This is a good measure of the importance of regular beats in a signal.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+	<feature>
+		<name>Strength Of Strongest Beat Overall Average</name>
+		<description>How strong the strongest beat in the beat histogram is compared to other potential beats.
+This is the overall average over all windows.</description>
+		<is_sequential>true</is_sequential>
+		<parallel_dimensions>1</parallel_dimensions>
+	</feature>
+</feature_key_file>
