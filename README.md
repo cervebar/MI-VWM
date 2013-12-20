@@ -1,2 +1,8 @@
-Czech Technical university MI-VWM Genre Recognition project
-======
+Czech Technical university in Prague
+MI-VWM Genre Recognition
+
+
+This is a semestral work at course MI-VWM at FIT CTU, authors Barbora Červenková, David Kulík.
+
+
+
